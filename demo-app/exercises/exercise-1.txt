@@ -1,0 +1,15 @@
+Exercise 1
+
+1. Create a new component named Car Tool in the component folder.
+
+2. In the Car Tool component display the following:
+
+a: <header><h1>Car Tool</h1></header>
+
+b: A table of cars using an HTML table element and related elements. Display the following columns and headers: Id, Make, Model, Year, Color, Price
+
+Display two rows of cars.
+
+3. Import the Car Tool component into index.js. Display the component beneath the Hello World component. Be sure to display both components at the same time. There should only be one ReactDOM.render in index.js file.
+
+4. Ensure it works.
