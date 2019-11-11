@@ -1,0 +1,9 @@
+Exercise 3
+
+1. Move the array of cars to index.js.
+
+2. Pass the array as props to car tool.
+
+3. Use the props to populate the car table in car tool.
+
+4. Ensure it works.
