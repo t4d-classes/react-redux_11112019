@@ -1,0 +1,7 @@
+Exercise 2
+
+1. Create an array of car objects in the Car Tool component. Use the hard-coded data from table to populate the array. Please DO NOT create an array of arrays and do not create multiple arrays. Create one array with two items, each items is a car object with properties corresponding to the column names.
+
+2. Replace the tbody rows with the car data from the array, and dynamically generate the car rows.
+
+3. Ensure it works with no errors.
