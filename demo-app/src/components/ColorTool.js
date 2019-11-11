@@ -1,34 +1,21 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import { useForm } from '../hooks/useForm';
+
 export const ColorTool = (props) => {
 
   const [ colors, setColors ] = useState([ ...props.colors ]);
 
-  const [ colorForm, setColorForm ] = useState({
+  const [ colorForm, change, resetColorForm ] = useForm({
     color: '',
   });
-
-  const change = ({ target: { name, type, value } }) => {
-
-    // updates the state and triggers a re-render of component
-    setColorForm({
-      ...colorForm, // object spread operator
-      // computed property
-      // color: 'b',
-      [ name ]: type === 'number'
-        ? (value.length > 0) && Number(value)
-        : value,
-    });
-  };
 
   const addColor = () => {
 
     setColors(colors.concat(colorForm.color));
 
-    setColorForm({
-      color: '',
-    });
+    resetColorForm();
 
   };
 
