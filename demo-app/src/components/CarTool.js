@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { carsPropType } from '../propTypes/carsPropTypes';
 
 export const CarTool = ({ cars }) => {
+
+  const [ carForm, setCarForm ] = useState({
+    make: '',
+    model: '',
+    year: 1900,
+    color: '',
+    price: 0,
+  });
+
+  const change = ({ target: { name, type, value } }) => {
+    setCarForm({
+      ...carForm,
+      [ name ]: type === 'number'
+        ? (value.length > 0) && Number(value)
+        : value,
+    });
+  };
+
+  console.log(carForm);
 
   return <>
     <header>
@@ -30,6 +49,18 @@ export const CarTool = ({ cars }) => {
         </tr>)}
       </tbody>
     </table>
+    <form>
+      <div>
+        <label htmlFor="make-input">Make:</label>
+        <input type="text" id="make-input" name="make"
+          value={carForm.make} onChange={change}  />
+      </div>
+      <div>
+        <label htmlFor="color-input">Color:</label>
+        <input type="text" id="color-input" name="color"
+          value={carForm.color} onChange={change}  />
+      </div>
+    </form>
   </>;
 
 };

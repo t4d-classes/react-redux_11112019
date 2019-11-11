@@ -1,0 +1,13 @@
+Exercise 5
+
+1. Create new state for managing the array of cars.
+
+2. Add a button, when the button is clicked add the collected car data as a new car to the array.
+
+To calculate the id use the following expression:
+
+Math.max(...cars.map(c => c.id), 0) + 1
+
+3. Ensure the car table is updated with the new car and car form is blanked out.
+
+4. Ensure it works.

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 export const ColorTool = (props) => {
 
+  const [ colors, setColors ] = useState([ ...props.colors ]);
+
   const [ colorForm, setColorForm ] = useState({
     color: '',
   });
@@ -20,6 +22,16 @@ export const ColorTool = (props) => {
     });
   };
 
+  const addColor = () => {
+
+    setColors(colors.concat(colorForm.color));
+
+    setColorForm({
+      color: '',
+    });
+
+  };
+
   console.log(colorForm);
 
   return <>
@@ -27,7 +39,7 @@ export const ColorTool = (props) => {
       <h1>{props.headerText}</h1>
     </header>
     <ul>
-      {props.colors.map(
+      {colors.map(
         (color) => <li key={color}>{color}</li>
       )}
     </ul>
@@ -38,6 +50,7 @@ export const ColorTool = (props) => {
         <input type="text" id="color-input" name="color"
           value={colorForm.color} onChange={change}  />
       </div>
+      <button type="button" onClick={addColor}>Add Color</button>
     </form>
   </>
 };
