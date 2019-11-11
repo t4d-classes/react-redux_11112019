@@ -1,12 +1,8 @@
 import React from 'react';
 
+import { carsPropType } from '../propTypes/carsPropTypes';
 
-export const CarTool = () => {
-
-  const cars = [
-      { id: 1, make: 'Ford', model: 'Fusion Hybrid', year: 2019, color: 'white', price: 25000 },
-      { id: 2, make: 'Tesla', model: 'S', year: 2018, color: 'red', price: 125000 },
-  ];
+export const CarTool = ({ cars }) => {
 
   return <>
     <header>
@@ -36,4 +32,8 @@ export const CarTool = () => {
     </table>
   </>;
 
+};
+
+CarTool.propTypes = {
+  cars: carsPropType.isRequired,
 };

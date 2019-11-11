@@ -1,0 +1,11 @@
+Exercise 4
+
+1. Add a form underneath the car table.
+
+2. Display a field for make, model, year, color and price. Do not display a field for id.
+
+3. Setup the state and change handler for collecting the car form data.
+
+4. Output the current state to the console on each key stroke.
+
+5. Ensure it works.
