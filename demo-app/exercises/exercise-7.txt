@@ -1,0 +1,13 @@
+Exercise 7
+
+1. Move Car Form to its own component. Utilize Car Form inside of Car Tool.
+
+2. Add a new column to Car Table. The new column a header labeled 'Actions'.
+
+3. In the Car View Row component, add a new column and place a button in the column with the label of the button being 'Delete'. When the button is clicked, remove the car from the table.
+
+Helper Code to do the Delete
+
+cars = cars.filter(c => c.id !== idOfCarToDelete);
+
+4. Ensure it works.
