@@ -1,0 +1,13 @@
+Exercise 6
+
+1. Create a new component named Tool Header. Move the header element and its children from Car Tool component to the new Tool Header component. Setup the header text to configured via props. Be sure to setup a default header text if none is provided and configure prop types.
+
+2. Replace the header in Car Tool with new Tool Header component.
+
+3. Create a new component named Car Table. Move the car table element and its children from Car Tool to the new Car Table component. Replace the car table in Car Tool with the new Car Table component.
+
+4. Create a new component named Car View Row. Move the data row from the car table to the new component. Utilize the new Car View Row component in Car Table component.
+
+5. Ensure everything works.
+
+Bon chance!
