@@ -1,25 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { useForm } from '../hooks/useForm';
+import { ColorForm } from './ColorForm';
 
 export const ColorTool = (props) => {
 
   const [ colors, setColors ] = useState([ ...props.colors ]);
 
-  const [ colorForm, change, resetColorForm ] = useForm({
-    color: '',
-  });
-
-  const addColor = () => {
-
-    setColors(colors.concat(colorForm.color));
-
-    resetColorForm();
-
+  const addColor = (color) => {
+    setColors(colors.concat(color));
   };
-
-  console.log(colorForm);
 
   return <>
     <header>
@@ -30,15 +20,7 @@ export const ColorTool = (props) => {
         (color) => <li key={color}>{color}</li>
       )}
     </ul>
-    <form>
-      <div>
-        {/* React.createElement('label', { htmlFor: 'color-input' }, 'Color:') */}
-        <label htmlFor="color-input">Color:</label>
-        <input type="text" id="color-input" name="color"
-          value={colorForm.color} onChange={change}  />
-      </div>
-      <button type="button" onClick={addColor}>Add Color</button>
-    </form>
+    <ColorForm buttonText="Add Color" onSubmitColor={addColor} />
   </>
 };
 
